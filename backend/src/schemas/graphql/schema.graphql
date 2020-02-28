@@ -1,0 +1,23 @@
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    password: String!
+    tasks: [Task!]
+}
+
+type Task {
+    title: String!
+    description: String!
+}
+
+type Query {
+    users: [User!]!
+    user(id: ID!): User
+    userAuthenticate(email:String!, password:String!): User
+}
+
+type Mutation {
+    userAdd(name: String!, email: String!, password: String!): User
+    taskAdd:(title:String!, description: String!): Task
+}
