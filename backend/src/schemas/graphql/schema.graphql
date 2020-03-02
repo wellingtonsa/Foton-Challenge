@@ -12,12 +12,10 @@ type Task {
 }
 
 type Query {
-    users: [User!]!
-    user(id: ID!): User
     userAuthenticate(email:String!, password:String!): User
 }
 
 type Mutation {
     userAdd(name: String!, email: String!, password: String!): User
-    taskAdd:(title:String!, description: String!): Task
+    taskAdd(userId: ID!, title:String!, description: String!): Task
 }
