@@ -15,11 +15,5 @@ const users = [
 ]
 
 module.exports = {
-    Query:{
-        userAuthenticate:() => users[0]
-    },
-    Mutation: {
-        userAdd: () => users[0],
-        taskAdd: () => users[0].tasks[0]
-    }
+    userAuthenticate:() => users[0]
 }

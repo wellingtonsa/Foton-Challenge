@@ -1,4 +1,4 @@
-const Model = require('./Model');
-const Resolver = require('./Resolver');
+const Model = require('../../model/User');
+const Resolver = require('./resolvers');
 
 module.exports = { Model, Resolver };
